@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{F62403FC-ACC6-6235-3722-36B4516EBC62}</ProjectGuid>
+    <ProjectGuid>{3B6788B5-CD28-8255-0B57-5018181D931E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerFootStep.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerSprintAndCrouch.cs" />
+    <Compile Include="Assets\Scripts\Weapon\ArrowBowScript.cs" />
     <Compile Include="Assets\Scripts\Weapon\WeaponHandler.cs" />
     <Compile Include="Assets\Scripts\Weapon\WeaponManager.cs" />
     <None Include="Assets\Shaders\Standard\_Antialiasing\SSAA.shader" />
@@ -87,16 +88,16 @@
     <None Include="Assets\Shaders\Standard\_Antialiasing\DLAA.shader" />
     <None Include="Assets\Shaders\Standard\_BloomAndFlares\LensFlareCreate.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/SurvialFPS/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Quynn/Documents/SurvivalFPS/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/SurvialFPS/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Quynn/Documents/SurvivalFPS/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/SurvialFPS/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Quynn/Documents/SurvivalFPS/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/SurvialFPS/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Quynn/Documents/SurvivalFPS/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -279,7 +280,7 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
     </Reference>
     <Reference Include="Facebook.Unity.Settings">
-      <HintPath>D:/SurvialFPS/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+      <HintPath>C:/Users/Quynn/Documents/SurvivalFPS/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
