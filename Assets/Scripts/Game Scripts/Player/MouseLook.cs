@@ -37,6 +37,7 @@ public class MouseLook : MonoBehaviour
     private Vector2 smooth_Move;
     private float current_Roll_Angle;
     private int last_Look_Frame;
+    
     // Use this for initialization
     void Start()
     {
@@ -53,9 +54,9 @@ public class MouseLook : MonoBehaviour
         }
     }
 
-    void LockAndUnlockCursor()
+    void LockAndUnlockCursor() // Lock and Unlock Mouse
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             if (Cursor.lockState == CursorLockMode.Locked)
             {
@@ -76,7 +77,6 @@ public class MouseLook : MonoBehaviour
 
         look_Angles.x = Mathf.Clamp(look_Angles.x, default_Look_Limits.x, default_Look_Limits.y);
 
-        //current_Roll_Angle = Mathf.Lerp(current_Roll_Angle, Input.GetAxisRaw(MouseAxis.MOUSE_X) * roll_Angle, Time.deltaTime * roll_Speed);
 
         LookRoot.localRotation = Quaternion.Euler(look_Angles.x, 0f, 0f);
         playerRoot.localRotation = Quaternion.Euler(0f, look_Angles.y, 0f);

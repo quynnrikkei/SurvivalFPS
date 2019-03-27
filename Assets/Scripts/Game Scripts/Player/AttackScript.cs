@@ -8,6 +8,7 @@ public class AttackScript : MonoBehaviour
     public float damage = 2f;
     public float radius = 1f;
 
+
     public LayerMask layermask;
 
     // Update is called once per frame
