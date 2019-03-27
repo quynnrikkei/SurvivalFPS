@@ -121,7 +121,7 @@ public class PlayerSprintAndCrouch : MonoBehaviour
                 sprint_Value += (sprint_Treshold / 2f) * Time.deltaTime;
 
                 playerStats.Display_StaminaStats(sprint_Value);
-               
+
 
                 if (sprint_Value > 100f)
                 {

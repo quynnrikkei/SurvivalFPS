@@ -61,15 +61,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Helper\TagHolder.cs" />
-    <Compile Include="Assets\Scripts\Player\MouseLook.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerFootStep.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerSprintAndCrouch.cs" />
-    <Compile Include="Assets\Scripts\Weapon\ArrowBowScript.cs" />
-    <Compile Include="Assets\Scripts\Weapon\WeaponHandler.cs" />
-    <Compile Include="Assets\Scripts\Weapon\WeaponManager.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Enemy\EnemyAnimator.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Enemy\EnemyAudio.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Enemy\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Helper\TagHolder.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Player\AttackScript.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Player\HealthScript.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Player\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Player\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Player\PlayerAxeWooshSound.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Player\PlayerFootStep.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Player\PlayerSprintAndCrouch.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Player\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Weapon\ArrowBowScript.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Weapon\WeaponHandler.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Weapon\WeaponManager.cs" />
     <None Include="Assets\Shaders\Standard\_Antialiasing\SSAA.shader" />
     <None Include="Assets\Shaders\Standard\_DepthOfField\DepthOfField34.shader" />
     <None Include="Assets\Shaders\Standard\_Antialiasing\FXAAPreset3.shader" />

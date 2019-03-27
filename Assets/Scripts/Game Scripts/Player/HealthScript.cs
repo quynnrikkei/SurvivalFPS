@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
 {
@@ -11,15 +12,23 @@ public class HealthScript : MonoBehaviour
     private NavMeshAgent navAgent;
     private EnemyController enemyController;
 
-    public float health = 100f;
+    public float health = 100f; //Current Health of Player and Enemy
+
+    private float maxHealth = 100f;
+    //public Image EnemyHealth;
 
     public bool is_Player, is_Boar, is_Cannibal;
 
     private bool is_Dead;
 
+    private int scoreValue = 10; //Point when hit enemy
+
     private EnemyAudio enemyAudio;
 
     private PlayerStats player_Stats;
+
+    private EnemyHealth enemy_Health;
+
 
     void Awake()
     {
@@ -29,12 +38,16 @@ public class HealthScript : MonoBehaviour
             navAgent = GetComponent<NavMeshAgent>();
             enemyController = GetComponent<EnemyController>();
             enemyAudio = GetComponentInChildren<EnemyAudio>();
+            enemy_Health = GetComponent<EnemyHealth>();
         }
 
         if (is_Player)
         {
             player_Stats = GetComponent<PlayerStats>();
+
         }
+
+
     }
 
     public void ApplyDamage(float damage)
@@ -47,6 +60,7 @@ public class HealthScript : MonoBehaviour
         if (is_Player)
         {
             player_Stats.Display_HealthStats(health);
+
         }
 
         if (is_Cannibal || is_Boar)
@@ -54,6 +68,11 @@ public class HealthScript : MonoBehaviour
             if (enemyController.Enemy_State == EnemyState.PATROL)
             {
                 enemyController.chase_Distance = 50f;
+
+                ScoreManager.score += scoreValue; //Point kill enemy
+
+                enemy_Health.Display_HealthEnemy(health);
+
             }
         }
 
@@ -62,7 +81,10 @@ public class HealthScript : MonoBehaviour
             PlayerDied();
 
             is_Dead = true;
+
+
         }
+
     }
 
     private void PlayerDied()
@@ -109,6 +131,7 @@ public class HealthScript : MonoBehaviour
             GetComponent<PlayerMovement>().enabled = false;
             GetComponent<PlayerAttack>().enabled = false;
             GetComponent<WeaponManager>().GetCurrentSelectedWeapon().gameObject.SetActive(false);
+
         }
 
         if (tag == Tags.PLAYER_TAG)
@@ -121,9 +144,12 @@ public class HealthScript : MonoBehaviour
         }
     }
 
+
+
     void RestartGame()
     {
-        SceneManager.LoadScene("Survival FPS Game");
+
+        SceneManager.LoadScene("Main Menu");
     }
 
     void TurnOffGameObject()
